@@ -1,0 +1,19 @@
+install raspian os
+
+sudo raspi-config
+expand
+activ cam
+
+sudo apt update
+sudo apt install pip
+
+pip install suntime
+pip install pytz
+
+
+put python script
+
+mkdir /home/pi/pics
+
+crontab -e
+*/2 * * * * /usr/bin/python /home/pi/timelapse.py > /tmp/timelapse.log 2>&1
